@@ -1,0 +1,72 @@
+export const skills = [
+    {
+        id: 1,
+        name: "React.js",
+        icon: "Code2",
+        level: "Expert",
+        experience: "1+ years",
+    },
+    {
+        id: 2,
+        name: "Tailwind CSS",
+        icon: "Palette",
+        level: "Expert",
+        experience: "1+ years",
+    },
+    {
+        id: 3,
+        name: "HTML5",
+        icon: "Filecode",
+        level: "Expert",
+        experience: "1+ years",
+    },
+    {
+        id: 4,
+        name: "CSS3",
+        icon: "Palette",
+        level: "Expert",
+        experience: "1+ years",
+    },
+    {
+        id: 5,
+        name: "JavaScript", 
+        icon: "Filecode",
+        level: "Advanced",
+        experience: "1+ years",
+    },
+    {
+        id: 6,
+        name: "Git & GitHub",
+        icon: "GitBranch",
+        level: "Advanced",
+        experience: "1 year",
+    },
+    {
+        id: 7,
+        name: "Figma",
+        icon: "Figma",
+        level: "Intermediate",
+        experience: "1+ years",
+    },
+    {
+        id: 8,
+        name: "Responsive Design",
+        icon: "Smartphone",
+        level: "Expert",
+        experience: "1+ years",
+    },
+    {
+        id: 9,
+        name: "UI/UX Design",
+        icon: "Palette",
+        level: "Expert",
+        experience: "1+ years",
+    },
+    {
+        id: 10,
+        name: "Vite",
+        icon: "Rocket",
+        level: "Advanced",
+        experience: "1+ years",
+    }
+]
