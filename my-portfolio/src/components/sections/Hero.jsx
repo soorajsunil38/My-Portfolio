@@ -1,15 +1,17 @@
 import { useState } from "react";
 import { ChevronDown, Star } from "lucide-react";
-import { $iReact, $iTailwindcss } from "../../assets/icons"; 
+import { $iReact, $iTailwindcss, $iHtml, $iCss, $iJavascript, $iFigma } from "../../assets/icons"; 
 import { PERSONAL_INFO, STATS } from "../../utils/constants";
 import { scrollToSection } from "../../hooks/useScrollSpy";
 import FadeIn from "../animations/FadeIn";
 import RadialGradientBackground from "../backgrounds/RadialGradientBackground"; 
+import myImage from "../../assets/my-image.jpg"
+
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden bg-black">
-      <RadialGradientBackground variant="hero" />
+      <RadialGradientBackground variant="hero" /> 
 
       {/* Content Container  */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
@@ -50,7 +52,7 @@ const Hero = () => {
             </FadeIn>
 
             <FadeIn delay={400}>
-              <div className="grid grid-cols-2 md:grid-cols-3 gap-10 max-w-full">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-10 max-w-full">
                 {STATS.map((stat, index) => (
                   <div 
                     key={index} 
@@ -67,8 +69,92 @@ const Hero = () => {
               </div>
             </FadeIn>
           </div>
+
+          {/* Right Column Content - Image */}
+          <FadeIn delay={200}>
+            <div className="relative">
+              <div className="relative overflow-hidden rounded-2xl aspect-4/5 max-w-[450px] ml-auto group">
+                <div className="absolute inset-0 rounded-2xl overflow-hidden">
+                  <div className="absolute inset-[-2px] bg-linear-to-r from-primary/20 via-primary/10 to-primary animate-spin-slow rounded-2xl">  
+                  </div>
+                </div>
+
+                {/* Image Contanier  */}
+                <div className="relative rounded-2xl overflow-hidden m-[1px] h-[calc(100%-2px)]">
+                  <img
+                    src={myImage}
+                    alt="my.image"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+
+                {/* Technology Logos  */}
+                <div className="absolute bottom-6 left-6 z-20">
+                  <FadeIn delay={500}>
+                    <div className="flex items-center gap-4 bg-black/40 backdrop-blur-sm border border-white/10 rounded-full px-6 py-3">
+                      <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                        <img
+                          src={$iReact}
+                          alt="React"
+                          className="w-full h-full"
+                        />
+                      </div>
+
+                    <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                      <img
+                        src={$iTailwindcss}
+                        alt="Tailwind CSS"
+                        className="w-full h-full"
+                      />
+                    </div>
+
+                    <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                      <img
+                        src={$iHtml}
+                        alt="HTML"
+                        className="w-full h-full"
+                      />
+                    </div>
+
+                    <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                      <img
+                        src={$iCss}
+                        alt="CSS"
+                        className="w-full h-full"
+                      />
+                    </div>
+
+                    <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                      <img
+                        src={$iJavascript}
+                        alt="Javascript"
+                        className="w-full h-full"
+                      />
+                    </div>
+
+                    <div className="w-6 h-6 flex items-center justify-center hover:scale-110 transition-transform duration-300">
+                      <img
+                        src={$iFigma}
+                        alt="Figma"
+                        className="w-full h-full"
+                      />
+                    </div>
+                    </div>
+                  </FadeIn>
+                </div>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </div>
+
+      {/* Scroll Indicator  */}
+      <button
+        onClick={() => scrollToSection('about')}
+        className="absolute bottom-2 left-1/2 -translate-1/2 animate-bounce"
+      >
+        <ChevronDown className="w-8 h-8 text-primary"/>
+      </button>
     </section>
   );
 }
