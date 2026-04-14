@@ -32,7 +32,7 @@ const FadeIn = ({ children, delay=0, threshold=0.1, duration=500 }) => {
   return (
     <div
       ref={elementRef}
-      className={isVisible ? "animation-fade-in" : "opacity-0"}
+      className={isVisible ? "animate-fade-in" : "opacity-0"}
       style={{
         animationDelay: isVisible ? `${delay}ms` : "0ms",
         animationDuration: `${duration}ms`,

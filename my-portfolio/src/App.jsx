@@ -5,7 +5,7 @@ import About from "./components/sections/About";
 
 function App() {
   return (
-    <div className="min-h-screen pb-[100vh]">
+    <div>
       <Navbar/>
       <main>
         <Hero/>

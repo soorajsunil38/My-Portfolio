@@ -4,8 +4,10 @@ export const PERSONAL_INFO = {
     email: "soorajsunil38@gmail.com",
     phone: "+91 8590007528",
     location: "Palakkad, Kerala, India",
-    tagline: "Passionate about creating intuitive and engaging user experiences with modern web technologies.",
-    resume: "",
+    tagline: [
+        "Crafting Digital Excellence Through Modern Code",
+    ],
+    resume: "Sooraj resume.pdf",
     bio: [ 
         "I am a passionate Frontend Developer specializing in building responsive, modern, and user-friendly web applications using React.js, Tailwind CSS, and JavaScript.",
         "I enjoy transforming ideas into real-world digital experiences with clean UI/UX and efficient code. I focus on performance, scalability, and intuitive design."
